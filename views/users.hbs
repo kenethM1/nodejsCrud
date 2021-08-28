@@ -1,0 +1,17 @@
+<div class="container">
+    <br />
+    <!-- Importante indicar el path donde se encuentra el metodo POST -->
+    <form action="/users/persona/operar" method="POST">
+        <input type="hidden" name="_id" value="{{persona._id}}"/>
+        <div class="form-group">
+            <label for="Nombre">Nombre:</label>
+            <input type="nombre" class="form-control" id="nombre" name="nombre" value="{{persona.nombre}}">
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <input type="text" class="form-control" id="mensaje" name="mensaje" value="{{persona.mensaje}}">
+        </div>        
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <a href="/" class="btn btn-danger">Cancelar</a>
+    </form>
+</div>

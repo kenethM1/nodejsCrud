@@ -1,0 +1,24 @@
+<div class="container">      
+    <div class="row">
+    <br>
+    <a href="/persona/nuevo" class="btn btn-primary">Nuevo</a>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Mensaje</th>            
+            <th colspan="2">Operación</th>
+        </tr>
+        </thead>
+        {{#each personas}}
+          <tr>
+            <td>{{this.nombre}}</td> 
+            <td>{{this.msensaje}}</td>            
+            <td><a href="/persona/modificar/{{this._id}}">Modificar</a></td> 
+            <td><a href="/persona/eliminar/{{this._id}}">Eliminar</a></td> 
+          </tr>          
+       {{/each}}   
+      </table>
+    </div>
+</div>
+
